@@ -271,7 +271,7 @@ def logout():
 # LOAD DATA
 try:
     volunteers = pd.read_csv(os.path.join(DATA, "volunteer.csv"))
-    ngos = pd.read_csv(os.path.join(DATA, "ngo.csv"))
+    ngos = pd.read_csv(os.path.join(DATA, "ngo.csv"), encoding="cp1252")
     opportunities = pd.read_csv(os.path.join(DATA, "opportunities.csv"))
     applications = pd.read_csv(os.path.join(DATA, "application.csv"))
 except FileNotFoundError as e:
